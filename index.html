@@ -24,15 +24,36 @@
     <button>클래스명 추가</button>
     <button>클래스명 제거</button>
     <button>클래스명 토글</button>
+    <button>클래스명 토글2</button>
 
 <script>
     const box = document.querySelector('article');
     const btns = document.querySelectorAll('button');
 
     btns[0].addEventListener('click', () => {
-
-
+        box.classList.add('on');
     })
+    btns[1].addEventListener('click', () => {
+        box.classList.remove('on');
+    })
+
+    // 눌렀을 때 변했다가 사라지게하는 토글
+    let isOn = box.classList.contains('on');
+    // on을 contain하고 있으면 true, 포함하고 있지 않으면 false
+    console.log(isOn);
+    //콘솔에 false 출력됨
+
+    btns[2].addEventListener('click', () => {
+        let isOn = box.classList.contains ('on');
+        // console.log(isOn);
+        if(isOn) box.classList.remove('on');
+        else box.classList.add('on');
+    });
+
+    // 토글 메서드 사용
+    btns[3].addEventListener('click', () => {
+        box.classList.toggle('on');
+    });
 
 
 </script>
