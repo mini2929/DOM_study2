@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM_study2</title>
+    <style>
+        article {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            margin-bottom: 20px;
+        }
+
+        article.on{
+            background-color: aqua;
+        }
+
+    </style>
 </head>
 <body>
     <article></article>
@@ -13,7 +26,13 @@
     <button>클래스명 토글</button>
 
 <script>
-    
+    const box = document.querySelector('article');
+    const btns = document.querySelectorAll('button');
+
+    btns[0].addEventListener('click', () => {
+
+
+    })
 
 
 </script>
